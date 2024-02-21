@@ -1,0 +1,101 @@
+<!-- templates/company.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .search-bar {
+            width: 300px;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding: 10px 20px;
+            color: #fff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .navbar ul li {
+            margin-bottom: 15px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .search-bar {
+            width: 200px;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+
+        .add-product-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'home' %}">Sign Out</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <input type="text" class="search-bar" placeholder="Product Search">
+        <button class="add-product-btn"><a href="{%url 'product' %}">+ Add Product</a></button>
+        <h2>Company Information</h2>
+        <!-- Add company information here -->
+    </div>
+</body>
+</html>
